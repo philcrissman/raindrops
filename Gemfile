@@ -25,14 +25,35 @@ gem 'jbuilder', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'haml-rails'
+gem 'bootstrap', '~> 4.0.0.alpha3'
+
+source 'https://rails-assets.org' do
+    gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'simple_form'
+
+gem 'acts-as-taggable-on', '~> 3.5'
+
+gem 'sorcery'
+
+gem 'metainspector'
+gem 'pismo'
+gem 'link_thumbnailer'
+
+gem 'kaminari'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -42,6 +63,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  # gem 'minitest-spec-rails'
+  gem 'minitest-rails', :github => 'blowmage/minitest-rails', :branch => "rails5"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
