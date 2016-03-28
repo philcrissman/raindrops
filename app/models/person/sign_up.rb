@@ -1,2 +1,2 @@
-class Person::SignUp < ApplicationRecord
+class Person::SignUp < Person
 end
