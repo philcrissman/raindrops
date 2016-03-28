@@ -3,6 +3,10 @@ class PeopleController < ApplicationController
   def index
   end
 
+  def new
+    @person = Person::SignUp.new
+  end
+
   private
 
   def person_params
