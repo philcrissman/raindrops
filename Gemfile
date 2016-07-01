@@ -8,7 +8,8 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-# gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0'
+gem 'coffee-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -38,7 +39,7 @@ end
 
 gem 'simple_form'
 
-# gem 'acts-as-taggable-on', '~> 3.5'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
 
 gem 'sorcery'
 
