@@ -1,0 +1,15 @@
+/* line 4, /Users/philcrissman/Workspace/sandbox/raindrops/app/assets/stylesheets/static_pages.scss */
+.container {
+  max-width: 46rem;
+}
+
+/* line 8, /Users/philcrissman/Workspace/sandbox/raindrops/app/assets/stylesheets/static_pages.scss */
+.jumbotron {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* line 13, /Users/philcrissman/Workspace/sandbox/raindrops/app/assets/stylesheets/static_pages.scss */
+.jumbotron blockquote {
+  font-size: 1.5rem;
+}
