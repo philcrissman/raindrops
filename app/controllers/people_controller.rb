@@ -7,6 +7,10 @@ class PeopleController < ApplicationController
     @person = Person::SignUp.new
   end
 
+  def create
+    @person = Person::SignUp.new(person_params)
+  end
+
   private
 
   def person_params
