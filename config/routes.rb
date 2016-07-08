@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
 
-  root 'static_pages#coming_soon'
+  # root 'static_pages#coming_soon'
+  root 'people#show'
+
+  get '/coming_soon', to: 'static_pages#coming_soon', as: "coming_soon"
 
   resources :people
+
 end

@@ -1,6 +1,10 @@
 class PeopleController < ApplicationController
+  skip_before_action :require_login, :only => [:new, :create]
 
   def index
+  end
+
+  def show
   end
 
   def new
