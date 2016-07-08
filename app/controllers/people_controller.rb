@@ -14,6 +14,7 @@ class PeopleController < ApplicationController
   def create
     @person = Person::SignUp.new(person_params)
     if @person.save
+      auto_login @person
       redirect_to root_path
     else
       render :new

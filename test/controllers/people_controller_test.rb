@@ -24,9 +24,11 @@ class PeopleControllerTest < ActionController::TestCase
 
     person = assigns(:person)
 
-    assert person.is_a?(Person::SignUp)
-    assert person.persisted?
+    assert person.is_a?(Person::SignUp), "person should be the expected class"
+    assert person.persisted?, "person should be saved"
     assert_equal "george@example.com", person.email
+    assert @controller.logged_in?, "person should be logged_in"
+    assert_equal person, @controller.current_user
     assert_response :redirect
     assert_redirected_to root_url
   end
