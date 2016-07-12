@@ -1,6 +1,5 @@
 require 'test_helper'
 
-# class PersonSessionsControllerTest < ActionDispatch::IntegrationTest
 class PersonSessionsControllerTest < ActionController::TestCase
   setup do
     @george = Person.create(:email => "george@example.com", :password => "AwesomeSauce")
