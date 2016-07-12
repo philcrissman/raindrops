@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
   get '/coming_soon', to: 'static_pages#coming_soon', as: "coming_soon"
 
-  get '/signin', to: 'person_sessions#new', as: "sign_in"
+  get '/signup', to: 'people#new', as: 'signup'
+  get '/signin', to: 'person_sessions#new', as: "signin"
 
 
 end
