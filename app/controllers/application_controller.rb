@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :require_login, :except => [:not_authenticated]
 
   def not_authenticated
-    redirect_to '/coming_soon', :alert => "You need to be logged in to visit that"
+    redirect_to '/signin', :alert => "You need to be logged in to visit that"
   end
 end

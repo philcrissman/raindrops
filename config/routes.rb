@@ -6,8 +6,12 @@ Rails.application.routes.draw do
 
   root 'people#show'
 
+  resources :people
+  resources :person_sessions
+
   get '/coming_soon', to: 'static_pages#coming_soon', as: "coming_soon"
 
-  resources :people
+  get '/signin', to: 'person_sessions#new', as: "sign_in"
+
 
 end

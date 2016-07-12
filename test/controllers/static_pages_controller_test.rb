@@ -15,6 +15,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get '/'
 
     assert_response :redirect
-    assert_redirected_to "/coming_soon"
+    assert_redirected_to "/signin"
   end
 end
