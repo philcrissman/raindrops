@@ -15,6 +15,11 @@ class PersonSessionsController < ApplicationController
     end
   end
 
+  def destroy
+    logout
+    redirect_to '/signin'
+  end
+
   private
 
   def signin_params
