@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get '/signin', to: 'person_sessions#new', as: 'signin'
   delete '/signout', to: 'person_sessions#destroy', as: 'signout'
 
+  resources :links
 
 end
