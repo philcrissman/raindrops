@@ -8,7 +8,25 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Old+Standard+TT", :rel => "stylesheet"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = yield :css
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
   %body
+    .pos-f-t
+      #navbar-header.collapse
+        .container-fluid.bg-inverse
+          Stuff up here?
+      .navbar.navbar-static-top
+        %button.btn.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => "#navbar-header"}
+          &#9776;
+        %a.navbar-brand
+          Raindrops
     .container
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
       = yield
+    = javascript_include_tag 'application'
