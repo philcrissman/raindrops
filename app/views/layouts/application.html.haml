@@ -9,24 +9,34 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = yield :css
   %body
-    .pos-f-t
-      #navbar-header.collapse
-        .container-fluid.bg-inverse
-          Stuff up here?
-      .navbar.navbar-static-top
-        %button.btn.navbar-toggler{:type => "button", "data-toggle" => "collapse", "data-target" => "#navbar-header"}
-          &#9776;
-        %a.navbar-brand
+    %header
+      %section
+        %h1
           Raindrops
-    .container
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
+        %p
+          %span.marginnote
+            %em
+              Raindrops on roses and whiskers on kittens,
+              %br
+              bright copper kettles and warm woolen mittens,
+              %br
+              brown paper packages tied up with strings,
+              %br
+              these are a few of my favorite things.
+    %nav
+      %ul
+        %li
+          =link_to "Home", root_path
+        - if logged_in?
+          %li
+            =link_to "Me", person_path(current_user)
+          %li
+            =link_to "Log out", signout_path, :method => :delete
+        - else
+          %li
+            =link_to "Sign up", signup_path
+          %li
+            =link_to "Sign in", signin_path
+    %article.main
       = yield
     = javascript_include_tag 'application'

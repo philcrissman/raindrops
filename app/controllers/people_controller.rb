@@ -1,6 +1,8 @@
 class PeopleController < ApplicationController
   skip_before_action :require_login, :only => [:new, :create]
 
+  before_action :find_person, :only => [:show, :edit, :destroy]
+
   def index
   end
 
@@ -9,6 +11,9 @@ class PeopleController < ApplicationController
 
   def new
     @person = Person::SignUp.new
+  end
+
+  def edit
   end
 
   def create
@@ -25,5 +30,9 @@ class PeopleController < ApplicationController
 
   def person_params
     params.require(:person).permit(:email, :username, :password, :password_confirmation)
+  end
+
+  def find_person
+    @person ||= Person.find(params[:id])
   end
 end
