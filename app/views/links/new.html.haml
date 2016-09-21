@@ -1,2 +1,7 @@
-%h1 Links#new
-%p Find me in app/views/links/new.html.haml
+%h1 New Link
+
+%p
+  %span.marginnote
+    This is where we enter a new thing. It doesn't need to have a url. It should at least have a title or description. After it has been created, you can add a comment, if you like.
+= simple_form_for @link, :url => person_links_path(current_person) do |form|
+  =render 'form', :form => form
